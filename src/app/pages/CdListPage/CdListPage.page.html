@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Cds
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card *ngFor="let cd of getJukeBox()" (click)="open(cd)">
+      <ion-card-header>
+        <ion-card-title>{{cd.id}}.{{cd.nom}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>{{cd.auteur}}</p>
+      </ion-card-content>
+    </ion-card>
+</ion-content>

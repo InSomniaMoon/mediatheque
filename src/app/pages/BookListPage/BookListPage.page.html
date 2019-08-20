@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Livres
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card *ngFor="let livre of getBibliotheque()" (click)="open(livre)">
+      <ion-card-header>
+        <ion-card-title>{{livre.id}}.{{livre.nom}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>{{livre.auteur}}</p>
+      </ion-card-content>
+    </ion-card>
+</ion-content>
