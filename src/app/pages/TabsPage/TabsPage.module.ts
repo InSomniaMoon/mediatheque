@@ -9,6 +9,7 @@ import { TabsPageRoutingModule } from './TabsPage.router.module';
 import { TabsPage } from './TabsPage.page';
 import { LendBookPage } from '../LendBookPage/LendBookPage.page';
 import { LendCdPage } from '../LendCdPage/LendCdPage.page';
+import { SettingsPage } from '../SettingsPage/SettingsPage.page';
 
 @NgModule({
   imports: [
@@ -20,7 +21,8 @@ import { LendCdPage } from '../LendCdPage/LendCdPage.page';
   declarations: [
     TabsPage,
   LendBookPage,
-  LendCdPage
+  LendCdPage,
+  SettingsPage
 ],
 })
 export class TabsPageModule {}

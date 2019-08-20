@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './TabsPage.page';
 import { LendBookPage } from '../LendBookPage/LendBookPage.page';
 import { LendCdPage } from '../LendCdPage/LendCdPage.page';
+import { SettingsPage } from '../SettingsPage/SettingsPage.page';
 
 const routes: Routes = [
   { path: 'tabs', component: TabsPage, children: [
@@ -26,7 +27,8 @@ const routes: Routes = [
   { path: 'LendBookPage', component: LendBookPage },
   { path: 'LendBookPage/:livre', component: LendBookPage },
   { path: 'LendCdPage', component: LendCdPage },
-  { path: 'LendCdPage/:cd', component: LendCdPage }
+  { path: 'LendCdPage/:cd', component: LendCdPage },
+  { path: 'SettingsPage', component: SettingsPage }
 
 ];
 

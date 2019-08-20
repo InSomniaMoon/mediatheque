@@ -1,5 +1,7 @@
 {
-  "name": "meditheque",
-  "integrations": {},
+  "name": "mediatheque",
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

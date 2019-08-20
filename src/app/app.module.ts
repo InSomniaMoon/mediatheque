@@ -9,12 +9,9 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PretsService } from './services/prets.service';
-
+import { SettingsPage } from './pages/SettingsPage/SettingsPage.page';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
   entryComponents: [],
   imports: [
     BrowserModule,
@@ -27,6 +24,9 @@ import { PretsService } from './services/prets.service';
     PretsService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
+  declarations: [
+    AppComponent
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

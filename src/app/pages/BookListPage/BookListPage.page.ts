@@ -17,7 +17,8 @@ export class BookListPage {
   }
 
   public async open(livre: { "id":string,"nom":string,"auteur":string,"isLent":boolean}) {
-    let modal = await this.modalCtrl.create({component: LendBookPage, componentProps: {livre}});
+    
+    const modal = await this.modalCtrl.create({component: LendBookPage, componentProps: {livre}});
     return await modal.present();
   }    
 
