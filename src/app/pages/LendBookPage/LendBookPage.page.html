@@ -1,12 +1,20 @@
 <ion-header>
-    <ion-toolbar>
-        <ion-buttons slot="end">
-            <ion-button (click)="modalCtrl.dismiss()">Close</ion-button>
-        </ion-buttons>
-        <ion-title>{{livre.nom}}</ion-title>
-    </ion-toolbar>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="modalCtrl.dismiss()">Close</ion-button>
+    </ion-buttons>
+    <ion-title>{{livre.nom}}</ion-title>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    
+    <br />
+        <ion-button [disabled]="livre.isLent" expand="block" size="large" color="warning" (click)="lend(livre)">
+            <ion-icon slot="start"  name="add"></ion-icon>
+            Louer
+        </ion-button>
+
+        <ion-button [disabled]="!livre.isLent" expand="block" size="large" color="success" (click)="return(livre)">
+            Rendre
+        </ion-button>
 </ion-content>

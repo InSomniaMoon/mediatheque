@@ -8,5 +8,13 @@
 </ion-header>
 
 <ion-content>
-    
+    <br />
+        <ion-button [disabled]="cd.isLent" expand="block" size="large" color="warning" (click)="lend(cd)">
+            <ion-icon slot="start"  name="add"></ion-icon>
+            Louer
+        </ion-button>
+
+        <ion-button [disabled]="!cd.isLent" expand="block" size="large" color="success" (click)="return(cd)">
+            Rendre
+        </ion-button>
 </ion-content>

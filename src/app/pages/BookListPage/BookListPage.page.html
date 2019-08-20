@@ -10,12 +10,13 @@
 </ion-header>
 
 <ion-content>
-    <ion-card *ngFor="let livre of getBibliotheque()" (click)="open(livre)">
+    <ion-card *ngFor="let livre of getBibliotheque()" (click)="open(livre)" [ngClass]="{lent: livre.isLent, return: !livre.isLent}">
       <ion-card-header>
-        <ion-card-title>{{livre.id}}.{{livre.nom}}</ion-card-title>
+        <ion-card-title>{{livre.id.substring(1,livre.id.length)}}.{{livre.nom}}</ion-card-title>
       </ion-card-header>
       <ion-card-content>
         <p>{{livre.auteur}}</p>
+        <span style="color: #eeffee">Loué</span>
       </ion-card-content>
     </ion-card>
 </ion-content>

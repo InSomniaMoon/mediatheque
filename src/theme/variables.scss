@@ -1,6 +1,13 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/theming/
 
+$colors: (
+  primary:          #264885,
+  secondary:        #1C7437,
+  light:            #f4f4f4,
+  dark:             #222,
+);
+
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
@@ -14,6 +21,7 @@
   /** secondary **/
   --ion-color-secondary: #0cd1e8;
   --ion-color-secondary-rgb: 12, 209, 232;
+  --ion-color-secondary-light:  #eeffee;
   --ion-color-secondary-contrast: #ffffff;
   --ion-color-secondary-contrast-rgb: 255, 255, 255;
   --ion-color-secondary-shade: #0bb8cc;
@@ -45,6 +53,7 @@
 
   /** danger **/
   --ion-color-danger: #f04141;
+  --ion-color-danger-secondary: #7f2020;  
   --ion-color-danger-rgb: 245, 61, 61;
   --ion-color-danger-contrast: #ffffff;
   --ion-color-danger-contrast-rgb: 255, 255, 255;

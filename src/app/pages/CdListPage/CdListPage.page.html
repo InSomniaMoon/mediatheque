@@ -10,12 +10,13 @@
 </ion-header>
 
 <ion-content>
-    <ion-card *ngFor="let cd of getJukeBox()" (click)="open(cd)">
+    <ion-card *ngFor="let cd of getJukeBox()" (click)="open(cd)" [ngClass]="{lent: cd.isLent, return: !cd.isLent}">
       <ion-card-header>
-        <ion-card-title>{{cd.id}}.{{cd.nom}}</ion-card-title>
+        <ion-card-title>{{cd.id.substring(1,cd.id.length)}}.{{cd.nom}}</ion-card-title>
       </ion-card-header>
       <ion-card-content>
         <p>{{cd.auteur}}</p>
+        <span style="color: #eeffee">Loué</span>
       </ion-card-content>
     </ion-card>
 </ion-content>

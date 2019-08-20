@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ModalController, NavParams } from '@ionic/angular';
+import { PretsService } from 'src/app/services/prets.service';
 
 @Component({
     selector: 'app-LendCdPage',
@@ -16,9 +17,19 @@ import { ModalController, NavParams } from '@ionic/angular';
     }
     
     constructor(private navParam: NavParams, 
-      public modalCtrl: ModalController) {
+      public modalCtrl: ModalController,
+      private mediatheque: PretsService) {
     }
     ngOnInit() {
       this.cd = this.navParam.get('cd')
     }
+
+    public lend(cd) {
+      this.mediatheque.lend(cd)
+    }
+
+    public return(cd) {
+      this.mediatheque.return(cd)
+    }
+
   }

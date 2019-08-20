@@ -20,9 +20,9 @@ import { SettingsPage } from '../SettingsPage/SettingsPage.page';
   ],
   declarations: [
     TabsPage,
-  LendBookPage,
-  LendCdPage,
-  SettingsPage
+    LendBookPage,
+    LendCdPage,
+    SettingsPage
 ],
 })
 export class TabsPageModule {}
